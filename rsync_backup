@@ -52,10 +52,10 @@ SOURCE_BASE=`basename "$SOURCE_PATH"`
 PERMS_DIR=755
 PERMS_FILE=644
 if [ $VERBOSE ]; then
-    RSYNC_OPTS="-a --no-D --exclude '/Volumes/*' --exclude '/dev/*' --delete -v"
+    RSYNC_OPTS="-a --no-D --exclude 'Volumes/*' --exclude 'dev/*' --delete -v"
     date
 else
-    RSYNC_OPTS="-a --no-D --exclude '/Volumes/*'--exclude '/dev/*' --delete -q"
+    RSYNC_OPTS="-a --no-D --exclude 'Volumes/*' --exclude 'dev/*' --delete -q"
 fi
 
 # Create the rotation directories if they don't exist.
